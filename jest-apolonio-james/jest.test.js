@@ -120,13 +120,96 @@ const relax2 = (string) => {
 
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+ describe("inBudget", () => {
+        it("returns in budget if price is lower than $300",  () => {
+            const budget = 299
+            expect(inBudget(budget)).toEqual("in budget")
+            
+        })
+    })
+
+//      FAIL  jest-apolonio-james/jest.test.js
+//   coffee
+//     ✓ returns drink coffee, keep working (1 ms)
+//   relax
+//     ✓ returns relax if you are stressed, keep going if you are not stressed (1 ms)
+//   inBudget
+//     ✕ returns in budget if price is lower than $300 (1 ms)
+
+//   ● inBudget › returns in budget if price is lower than $300
+
+//     expect(received).toEqual(expected) // deep equality
+
+//     Expected: "in budget"
+//     Received: undefined
+
+// GREEN
+// Pseudocode 
+ 
+//     create a function called inBudget
+//     need conditional in function "if"
+//     return "in budget"
+//     test to see if it passes
+
+
 // Create the function that will make the test pass.
 
-
+const inBudget = (number) => {
+    if(number < 300) {
+        return "in budget"
+    }
+    
+}
 
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
+
+   describe("numbers", () => {
+        it("returns the smaller number",  () => {
+            const numbers = 20
+            const number2 = 40
+            expect(numbers(number2)).toEqual("smaller number")
+            
+            
+        })
+    })
+
+//      FAIL  jest-apolonio-james/jest.test.js
+//   coffee
+//     ✓ returns drink coffee, keep working (2 ms)
+//   relax
+//     ✓ returns relax if you are stressed, keep going if you are not stressed
+//   inBudget
+//     ✓ returns in budget if price is lower than $300
+//   numbers
+//     ✕ returns the smaller number
+
+//   ● numbers › returns the smaller number
+
+//     ReferenceError: numbers is not defined
+
+// / GREEN
+// Pseudocode 
+ 
+    // create a function called numbers
+    // need conditional in function "if else"
+    // return "relax" if stressed, "keep going" if not stressed
+    // test to see if it passes
+
+
+
 // Create the function that will make the test pass.
+
+const numbers = (number) => {
+    if (numbers < 40) {
+        return "smaller number"
+    }
+    
+}
+
+
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
