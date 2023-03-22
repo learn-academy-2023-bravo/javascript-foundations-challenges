@@ -1,11 +1,11 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
 // Create the function that will make the test pass.
-describe("areYouTired", () => {
-    it("returs drink cofee if you are tired and keep working if you are not", () => {
-        expect(areYouTired('yes')).toEqual('drink coffee')
-        expect(areYouTired('no')).toEqual('keep working')
-    })
-})
+// describe("areYouTired", () => {
+//     it("returs drink cofee if you are tired and keep working if you are not", () => {
+//         expect(areYouTired('yes')).toEqual('drink coffee')
+//         expect(areYouTired('no')).toEqual('keep working')
+//     })
+// })
 //output:
 // FAIL  ./jest.test.js
 // areYouTired
@@ -14,13 +14,13 @@ describe("areYouTired", () => {
 // ● areYouTired › returs drink cofee if you are tired and keep working if you are not
 
 //   ReferenceError: areYouTired is not defined
-const areYouTired = (string) => {
-    if (string === "yes") {
-        return "drink coffee"
-    } else if (string === "no"){
-        return "keep working"
-    }
-}
+// const areYouTired = (string) => {
+//     if (string === "yes") {
+//         return "drink coffee"
+//     } else if (string === "no"){
+//         return "keep working"
+//     }
+// }
 //output:
 // PASS  ./jest.test.js
 // areYouTired
@@ -32,12 +32,12 @@ const areYouTired = (string) => {
 //output: 1 string
 // creating a function called areYouStressed takes an argument that check for "yes or no" and returns a string.
 
-describe ("areYouStressed", () =>{
-    it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
-        expect(areYouStressed('yes')).toEqual("relax")
-        expect(areYouStressed("no")).toEqual("keep going")
-    })
-})
+// describe ("areYouStressed", () =>{
+//     it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
+//         expect(areYouStressed('yes')).toEqual("relax")
+//         expect(areYouStressed("no")).toEqual("keep going")
+//     })
+// })
 
 // FAIL  ./jest.test.js
 // areYouTired
@@ -57,14 +57,14 @@ describe ("areYouStressed", () =>{
 //     39 |     })
 //     40 | })
 
-const areYouStressed = (string) => {
-    if(string === "yes") {
-        return "relax"
-    } else if (string === "no"){
-        return "keep going"
-    }
-}
-//output:
+// const areYouStressed = (string) => {
+//     if(string === "yes") {
+//         return "relax"
+//     } else if (string === "no"){
+//         return "keep going"
+//     }
+// }
+// //output:
 // PASS  ./jest.test.js
 // areYouTired
 //   ✓ returs drink cofee if you are tired and keep working if you are not (5 ms)
@@ -77,8 +77,75 @@ const areYouStressed = (string) => {
 
 // Create the function that will make the test pass.
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+// Create a function inBudget
+// Create parameter called 'number'
+// take a number as input/argument
+// Use a relational operators: =, <=, >= 
+// output a string - "in budget"
+
+describe("inBudget", () => {
+    it("return a string in budget if price is lower than $300, if not return string you broke", () => {
+        expect(inBudget(200)).toEqual("in budget")
+        expect(inBudget(350)).toEqual("you broke")
+    })
+})
+
+//output:
+// FAIL  ./jest.test.js
+// inBudget
+//   ✕ return a string in budget if price is lower than $300, if not return string you broke (2 ms)
+
+// ● inBudget › return a string in budget if price is lower than $300, if not return string you broke
+
+//   ReferenceError: inBudget is not defined
+
+const inBudget = (number) => {
+    if(number <= 300) {
+        return "in budget"
+    } else if(number > 300) {
+        return "you broke"
+    }
+}
+
+//output:
+//  PASS  ./jest.test.js
+//   inBudget
+//   ✓ return a string in budget if price is lower than $300, if not return string you broke (6 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
+// Snapshots:   0 total
+// Time:        1.422 s, estimated 2 s
+// Ran all test suites.
+// ✨  Done in 5.76s.
+
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in two numbers and returns the smaller number.
+
+//psuedocode
+// Function called smallerNum
+// Parameter will take 2 numbers as input
+// Relational operator
+// Ouput smaller number
+
+describe("smallerNum", () => {
+    it("takes two numbers in and returns the smaller number", () => {
+        expect(smallerNum(1, 1)).toEqual(1);
+    })
+})
+
+const smallerNum = (num1, num2) => {
+    if(num1 < num2) {
+        return num1
+    } else if(num1 > num2) {
+        return num2
+    } else if(num1 === num2){
+        return num1
+    }
+}
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
