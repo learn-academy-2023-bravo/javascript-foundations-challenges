@@ -1,11 +1,11 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
 // Create the function that will make the test pass.
-// describe("areYouTired", () => {
-//     it("returs drink cofee if you are tired and keep working if you are not", () => {
-//         expect(areYouTired('yes')).toEqual('drink coffee')
-//         expect(areYouTired('no')).toEqual('keep working')
-//     })
-// })
+describe("areYouTired", () => {
+    it("returs drink cofee if you are tired and keep working if you are not", () => {
+        expect(areYouTired('yes')).toEqual('drink coffee')
+        expect(areYouTired('no')).toEqual('keep working')
+    })
+})
 //output:
 // FAIL  ./jest.test.js
 // areYouTired
@@ -14,13 +14,13 @@
 // ● areYouTired › returs drink cofee if you are tired and keep working if you are not
 
 //   ReferenceError: areYouTired is not defined
-// const areYouTired = (string) => {
-//     if (string === "yes") {
-//         return "drink coffee"
-//     } else if (string === "no"){
-//         return "keep working"
-//     }
-// }
+const areYouTired = (string) => {
+    if (string === "yes") {
+        return "drink coffee"
+    } else if (string === "no"){
+        return "keep working"
+    }
+}
 //output:
 // PASS  ./jest.test.js
 // areYouTired
@@ -32,12 +32,12 @@
 //output: 1 string
 // creating a function called areYouStressed takes an argument that check for "yes or no" and returns a string.
 
-// describe ("areYouStressed", () =>{
-//     it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
-//         expect(areYouStressed('yes')).toEqual("relax")
-//         expect(areYouStressed("no")).toEqual("keep going")
-//     })
-// })
+describe ("areYouStressed", () =>{
+    it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
+        expect(areYouStressed('yes')).toEqual("relax")
+        expect(areYouStressed("no")).toEqual("keep going")
+    })
+})
 
 // FAIL  ./jest.test.js
 // areYouTired
@@ -49,21 +49,21 @@
 
 //   ReferenceError: areYouStressed is not defined
 
-//     35 | describe ("areYouStressed", () =>{
-//     36 |     it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
-//   > 37 |         expect(areYouStressed('yes')).toEqual("relax")
-//        |         ^
-//     38 |         expect(areYouStressed("no")).toEqual("keep going")
-//     39 |     })
-//     40 | })
+    describe ("areYouStressed", () =>{
+             it("returns a string that says relax if you are stresed and keep going if you are not", () =>{
+             expect(areYouStressed('yes')).toEqual("relax")
+             ^
+             expect(areYouStressed("no")).toEqual("keep going")
+         })
+     })
 
-// const areYouStressed = (string) => {
-//     if(string === "yes") {
-//         return "relax"
-//     } else if (string === "no"){
-//         return "keep going"
-//     }
-// }
+const areYouStressed = (string) => {
+    if(string === "yes") {
+        return "relax"
+    } else if (string === "no"){
+        return "keep going"
+    }
+}
 // //output:
 // PASS  ./jest.test.js
 // areYouTired
@@ -148,8 +148,84 @@ const smallerNum = (num1, num2) => {
 
 // Create the function that will make the test pass.
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+
+// Pseudocode
+
+// input is a number that will create a function
+// Create a function called oddNumber
+// Use conditional statement to check if number is odd or even
+// Will return string of "odd" or "even"
+
+describe("oddNumber" , () => {
+    it("returns odd or even based on input", () => {
+        expect(oddNumber(5)).toEqual("odd");
+        expect(oddNumber(4)).toEqual("even");
+    }) 
+})
+    const oddNumber = (number) => {
+        if(number % 2 !== 0) {
+            return "odd"
+        } else if(number % 2 === 0) {
+            return "even"
+        }
+    }
+//  PASS  ./jest.test.js
+//   oddNumber
+//   ✓ returns odd or even based on input (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
+// Snapshots:   0 total
+// Time:        0.166 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.75s.
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+    // Pseudocode
+        // Input is a string
+        // Output is a string 
+        // Create a function called fruitColor
+        // Use conditional statement with === operator 
+        
+    describe("fruitColor", () => {
+        it("return fruit color based on the input", () => {
+            expect(fruitColor("banana")).toEqual("yellow");
+            expect(fruitColor("apple")).toEqual("red");
+            expect(fruitColor("grape")).toEqual("purple");
+        })
+    })
+    const fruitColor = (string) => {
+        if(string === "banana") {
+            return "yellow"
+        } else if (string === "apple") {
+            return "red"
+        } else if (string === "grape") {
+            return "purple"
+        }
+    }
+//     PASS  ./jest.test.js
+//     areYouTired
+//       ○ skipped returs drink cofee if you are tired and keep working if you are not
+//     areYouStressed
+//       ○ skipped returns a string that says relax if you are stresed and keep going if you are not
+//       ○ skipped returns a string that says relax if you are stresed and keep going if you are not
+//     inBudget
+//       ○ skipped return a string in budget if price is lower than $300, if not return string you broke
+//     smallerNum
+//       ○ skipped takes two numbers in and returns the smaller number
+//     oddNumber
+//       ○ skipped returns odd or even based on input
+//     fruitColor
+//       ✓ return fruit color based on the input (1 ms)
+  
+//   Test Suites: 1 passed, 1 total
+//   Tests:       6 skipped, 1 passed, 7 total
+//   Snapshots:   0 total
+//   Time:        0.179 s, estimated 1 s
+//   Ran all test suites.
+//   ✨  Done in 0.87s.
+
 // Create the function that will make the test pass.
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
