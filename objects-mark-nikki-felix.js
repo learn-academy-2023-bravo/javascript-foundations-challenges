@@ -91,21 +91,36 @@ const animals = [
 
 // const type = animals.filter((value) => value.type === "cat")
 const type = animals.filter((value) => value.type === "cat")
-console.log(type)
+// console.log(type)
 
 const onlyCats = () => {
   let cats = animals.filter((value) => value.type === "cat")
   return cats
 }
 
-
-
-
-
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+
+const onlyNames = () => {
+  let animalNames = animals.map((value) => value.name)
+  return animalNames
+}
+// console.log(onlyNames())
+
+
+
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+
+const oldAnimal = animals.filter((value) => value.age > 10)
+// console.log(oldAnimal)
+
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 // Consider this variable:
+
+const eachAnimal = animals.map((value) => {
+  return `${value.name} is ${value.age} and is a ${value.type}.`
+})
+// console.log(eachAnimal)
+
 
 // const author = {
 //   name: "H. G. Wells",
