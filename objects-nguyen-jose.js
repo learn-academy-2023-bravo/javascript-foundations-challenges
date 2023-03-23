@@ -22,24 +22,35 @@
 // person.homePlanet = "Earth"
 // console.log(person) //--> { firstName: 'Arthur', lastName: 'Dent', homePlanet: 'Earth' }
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
-const person = {
-    firstName: "Arthur",
-    lastName: "Dent",
-    homePlanet: "Earth",
-    areaCode: function() {
-        return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}`
-    }
-  }
-const areaCode = person.areaCode()
+// const person = {
+//     firstName: "Arthur",
+//     lastName: "Dent",
+//     homePlanet: "Earth",
+//     areaCode: function() {
+//         return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}`
+//     }
+//   }
+// const areaCode = person.areaCode()
 
-  console.log(areaCode)
+//   console.log(areaCode)
+
 // Consider this variable:
 
-// const product = {
-//   name: "chair",
-//   price: 24.99
-// }
+const product = {
+  name: "chair",
+  price: 24.99,
+  describeProduct: function() {
+    return `The product is a ${product.name}.`
+  }
+}
+console.log(product.describeProduct())
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+//Pseudocode: 1.) create a function called describeProduct.
+//            2.) pass in the object product as an argument
+//            3.) return string interpolated `The product is a ${this.name}.`
+
+
 
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
