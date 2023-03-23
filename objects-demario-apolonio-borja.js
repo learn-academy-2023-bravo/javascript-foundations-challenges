@@ -57,24 +57,61 @@ console.log(totalWithTax(product))
 
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  sandwichIngredients: function () {
+    return `The ingredients for ${this.name} sandwich are ${this.ingredients[0]}, ${this.ingredients[1]}, and ${this.ingredients[2]}.`
+    }
+}
+
 // Write the code that accesses the ingredients property.
+
+    console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+
+    console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+    // const sandwichIngredients = (object) => {
+    //     return `The ingredients for ${object.name} sandwich are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.`
+    // }
+    // console.log(sandwichIngredients(lunch))
+
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+console.log(lunch.sandwichIngredients())
+
 // Consider this variable:
 
-// const animals = [
-//   { name: "Waffles", type: "dog", age: 7 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 }
-// ]
+const animals = [
+  { name: "Waffles", type: "dog", age: 7 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 }
+]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+
+// const catsOnly = (object) => {object.filter((value), value = object.type === 'cat')}
+
+    // The code below is not working yet. start back up at this point
+
+    // const catsOnly = (array) => {
+    //     return array.filter(array.type === "cat")
+    //     }
+
+    // console.log(catsOnly(animals));
+
+
+    // The code above is not working yet. 
+
+
+
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
