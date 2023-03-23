@@ -88,6 +88,8 @@ class Cylinder {
         this.height = height
     }
 
+
+    // Math.PI is used to represent Pi, Math.pow is used to do the power operation on two numbers, .toFixed is used to round a number to a given amount of decimal places.
     calculations() {
         return (Math.PI * (Math.pow(this.radius, 2)) * this.height).toFixed(4)
     }
