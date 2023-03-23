@@ -44,12 +44,31 @@ const lunch = {
 	name: 'PB and Banana',
 	type: 'sandwich',
 	ingredients: ['bread', 'peanut butter', 'banana'],
+	recipe: function() {
+		this.ingredients[this.ingredients.length -1] = `and ${this.ingredients[this.ingredients.length -1]}`
+		return `"The ingredients for a ${this.name} ${this.type} are ${this.ingredients}`
+	}
 }
 
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+
+console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+// const meal = (data) => {
+// 	data.ingredients[data.ingredients.length -1] = `and ${data.ingredients[data.ingredients.length -1]}`
+// 	return `"The ingredients for a ${data.name} ${data.type} are ${data.ingredients}`
+// }
+// console.log(meal(lunch))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+console.log(lunch.recipe())
+
 
 const animals = [
 	{ name: 'Waffles', type: 'dog', age: 7 },
@@ -59,6 +78,12 @@ const animals = [
 ]
 
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+
+const onlyCats = animals.filter((value) => {
+	return value.type.includes("cat")
+})
+console.log(onlyCats)
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
