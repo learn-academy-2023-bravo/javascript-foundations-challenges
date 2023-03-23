@@ -89,7 +89,7 @@ class Cylinder {
     }
 
     calculations() {
-        return (3.14 * this.radius * this.height * 2).toFixed(4)
+        return (Math.PI * (Math.pow(this.radius, 2)) * this.height).toFixed(4)
     }
 }
 
